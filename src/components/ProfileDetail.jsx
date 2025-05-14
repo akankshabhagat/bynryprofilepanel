@@ -2,20 +2,14 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import './ProfileDetail.css';
 
-const ProfileDetail = () => {
+const ProfileDetail = ({ profiles }) => {
   const { id } = useParams();
+const profile = profiles.find((p) => p.id.toString() === id);
 
-  // Simulated profile data (would normally fetch this from a backend or context/store)
-  const profile = {
-    id,
-    name: 'Ricky Park',
-    location: 'New York',
-    description: 'User interface designer and front-end developer',
-    image: 'https://randomuser.me/api/portraits/women/79.jpg',
-    skills: ['UI / UX', 'Front End Development', 'HTML', 'CSS', 'JavaScript', 'React', 'Node'],
-    lat: 40.7128,
-    lng: -74.0060,
-  };
+if (!profile) {
+  return <div>Profile not found.</div>;
+}
+
 
   return (
     <div className="profile-detail">
@@ -30,14 +24,15 @@ const ProfileDetail = () => {
         ))}
       </ul>
       <div className="map-container">
-        <iframe
-          title="map"
-          width="100%"
-          height="300"
-          style={{ border: 0 }}
-          src={`https://www.google.com/maps?q=${profile.lat},${profile.lng}&hl=es;z=14&output=embed`}
-          allowFullScreen
-        ></iframe>
+     <iframe
+  title="map"
+  width="100%"
+  height="300"
+  style={{ border: 0 }}
+  src={`https://www.google.com/maps?q=${encodeURIComponent(profile.location)}&output=embed`}
+  allowFullScreen
+></iframe>
+
       </div>
     </div>
   );
