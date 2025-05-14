@@ -1,0 +1,22 @@
+.profile-list {
+  padding: 2rem;
+  background-color: #FFFBDE;
+  min-height: 100vh;
+}
+
+.add-button {
+  background-color: #90D1CA;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #096B68;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

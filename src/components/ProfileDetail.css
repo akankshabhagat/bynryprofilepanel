@@ -1,0 +1,47 @@
+.profile-detail {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #fffade; /* FFFBDE */
+  border-radius: 10px;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(9, 107, 104, 0.2); /* 096B68 */
+  font-family: 'Montserrat', sans-serif;
+  color: #096b68;
+}
+
+.detail-image {
+  border-radius: 50%;
+  width: 150px;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+.profile-detail h2,
+.profile-detail h4 {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.profile-detail ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.profile-detail li {
+  background: #90d1ca;
+  color: #231e39;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.map-container {
+  margin-top: 2rem;
+  border: 2px solid #90d1ca;
+  border-radius: 10px;
+  overflow: hidden;
+}
